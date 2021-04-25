@@ -1,0 +1,30 @@
+
+<div class="container">
+  <div class="row">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Sub Total</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cart of cartItems;let i=index;">
+            <td>{{cart.productId}}</td>
+            <td>{{cart.productName}}</td>
+            <td>{{cart.qty}}</td>
+            <td>{{cart.price}}</td>
+            <td>{{cart.subTotal | number : '1.2-2' }}</td>
+          </tr>
+    </tbody>
+    <tfoot>
+      <tr> <td colspan="4"></td>
+        <td colspan="3"> Total: {{total | number : '1.2-2' }}</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+</div>
